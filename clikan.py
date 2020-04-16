@@ -82,7 +82,7 @@ def clikan():
 def configure():
     """Place default config file in your home directory"""
     path = os.path.expanduser("~/.clikan.dat")
-    with open(os.path.expanduser("~/.clikan.yaml", 'w') as outfile:
+    with open(os.path.expanduser("~/.clikan.yaml", 'w')) as outfile:
         yaml.dump({'clikan_data': path}, outfile, default_flow_style=False)
     click.echo("Creating %s" % path)
 
